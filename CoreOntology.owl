@@ -1,0 +1,922 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://localhost:8080/ontologies/onto/Resources2.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://localhost:8080/ontologies/onto/Resources2.owl"
+     versionIRI="http://localhost:8080/ontologies/onto/Resources2.owl">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Collection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CourseModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Domain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Topic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToCollection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coversTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRootTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEquivalentTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nextTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#parentTopicOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#precedes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#requiresTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#specializedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#externalLink"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#label"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#link"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#course_Kurose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#course_Tanenbaum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#domain_Redes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Kurose_Aplicacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Kurose_CamadaRede"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Kurose_EnlaceERedesLocais"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Kurose_Gerenciamento"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Kurose_Multimidia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Kurose_RedesDeComputadoresEInternet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Kurose_RedesSemFio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Kurose_Seguranca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Kurose_Transporte"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaAplicacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeRede"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeTransporte"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaEnlaceDeDados"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaFisica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Tanembaum_SegurancaRedes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Tanembaum_SubcamadaControleAcessoAoMeio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Tanembaum_SugestoesLeituras"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Tanembaum_introducao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Domain"/>
+        <NamedIndividual IRI="#domain_Redes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CourseModel"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CourseModel"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Kurose_Aplicacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Kurose_CamadaRede"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Kurose_EnlaceERedesLocais"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Kurose_Gerenciamento"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Kurose_Multimidia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesDeComputadoresEInternet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesSemFio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Kurose_Seguranca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Kurose_Transporte"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaAplicacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeRede"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeTransporte"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaEnlaceDeDados"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaFisica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SegurancaRedes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SubcamadaControleAcessoAoMeio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SugestoesLeituras"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Topic"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsTo"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#domain_Redes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRootTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_Gerenciamento"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_Seguranca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_CamadaRede"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_Transporte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesSemFio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_EnlaceERedesLocais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_Aplicacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_Multimidia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTopic"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesDeComputadoresEInternet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsTo"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+        <NamedIndividual IRI="#domain_Redes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRootTopic"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Kurose_Aplicacao"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Kurose_Aplicacao"/>
+        <NamedIndividual IRI="#topic_Kurose_Transporte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Kurose_CamadaRede"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Kurose_CamadaRede"/>
+        <NamedIndividual IRI="#topic_Kurose_EnlaceERedesLocais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Kurose_EnlaceERedesLocais"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Kurose_EnlaceERedesLocais"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesSemFio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#specializedBy"/>
+        <NamedIndividual IRI="#topic_Kurose_EnlaceERedesLocais"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SubcamadaControleAcessoAoMeio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#specializedBy"/>
+        <NamedIndividual IRI="#topic_Kurose_EnlaceERedesLocais"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaEnlaceDeDados"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Kurose_Gerenciamento"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Kurose_Multimidia"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Kurose_Multimidia"/>
+        <NamedIndividual IRI="#topic_Kurose_Seguranca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesDeComputadoresEInternet"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesDeComputadoresEInternet"/>
+        <NamedIndividual IRI="#topic_Kurose_Aplicacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesSemFio"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesSemFio"/>
+        <NamedIndividual IRI="#topic_Kurose_Multimidia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Kurose_Seguranca"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Kurose_Seguranca"/>
+        <NamedIndividual IRI="#topic_Kurose_Gerenciamento"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Kurose_Transporte"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Kurose_Transporte"/>
+        <NamedIndividual IRI="#topic_Kurose_CamadaRede"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+        <NamedIndividual IRI="#model_Kurose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+        <NamedIndividual IRI="#topic_Kurose_Multimidia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+        <NamedIndividual IRI="#topic_Kurose_CamadaRede"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+        <NamedIndividual IRI="#topic_Kurose_EnlaceERedesLocais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesSemFio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+        <NamedIndividual IRI="#topic_Kurose_Transporte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+        <NamedIndividual IRI="#topic_Kurose_Aplicacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+        <NamedIndividual IRI="#topic_Kurose_Seguranca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+        <NamedIndividual IRI="#topic_Kurose_Gerenciamento"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Kurose_root"/>
+        <NamedIndividual IRI="#topic_Kurose_RedesDeComputadoresEInternet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaAplicacao"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEquivalentTo"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaAplicacao"/>
+        <NamedIndividual IRI="#topic_Kurose_Aplicacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaAplicacao"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SegurancaRedes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeRede"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeRede"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeTransporte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeTransporte"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEquivalentTo"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeTransporte"/>
+        <NamedIndividual IRI="#topic_Kurose_Transporte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeTransporte"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaAplicacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaEnlaceDeDados"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaEnlaceDeDados"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SubcamadaControleAcessoAoMeio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaFisica"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaFisica"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaEnlaceDeDados"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SegurancaRedes"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEquivalentTo"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SegurancaRedes"/>
+        <NamedIndividual IRI="#topic_Kurose_Seguranca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SegurancaRedes"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SugestoesLeituras"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SubcamadaControleAcessoAoMeio"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SubcamadaControleAcessoAoMeio"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeRede"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SugestoesLeituras"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Tanembaum_introducao"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nextTopic"/>
+        <NamedIndividual IRI="#topic_Tanembaum_introducao"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaFisica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+        <NamedIndividual IRI="#model_Tanenbaum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SubcamadaControleAcessoAoMeio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+        <NamedIndividual IRI="#topic_Tanembaum_introducao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaAplicacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaEnlaceDeDados"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaFisica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeRede"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SegurancaRedes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+        <NamedIndividual IRI="#topic_Tanembaum_SugestoesLeituras"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <NamedIndividual IRI="#topic_Tanenbaum_root"/>
+        <NamedIndividual IRI="#topic_Tanembaum_CamadaDeTransporte"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#belongsTo"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#coversTopic"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRootTopic"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTopic"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isEquivalentTo"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#nextTopic"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#precedes"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#specializedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <ObjectProperty IRI="#hasTopic"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#belongsTo"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#belongsToModel"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasRootTopic"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isEquivalentTo"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#nextTopic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#parentTopicOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#precedes"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#specializedBy"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isEquivalentTo"/>
+    </TransitiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#nextTopic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#parentTopicOf"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#precedes"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#specializedBy"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#CourseModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsToCollection"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coversTopic"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRootTopic"/>
+        <Class IRI="#CourseModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTopic"/>
+        <Class IRI="#CourseModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEquivalentTo"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#nextTopic"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#precedes"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#requiresTopic"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specializedBy"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#Domain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsToCollection"/>
+        <Class IRI="#Collection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsToModel"/>
+        <Class IRI="#CourseModel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coversTopic"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRootTopic"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTopic"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEquivalentTo"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#nextTopic"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#parentTopicOf"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#precedes"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#requiresTopic"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specializedBy"/>
+        <Class IRI="#Topic"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#externalLink"/>
+        <Class IRI="#Topic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#label"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#link"/>
+        <Class IRI="#Resource"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#externalLink"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#label"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#link"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Domain</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Knowledge_Domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Kurose_Aplicacao</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Kurose_Application</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Kurose_CamadaRede</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Kurose_NetworkLayer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Kurose_EnlaceERedesLocais</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Kurose_LinkLayer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Kurose_Gerenciamento</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Kurose_NetworkManagement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Kurose_Multimidia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Kurose_Multimedia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Kurose_RedesDeComputadoresEInternet</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Kurose_ComputerNetworks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Kurose_RedesSemFio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Kurose_WirelessAndMobile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Kurose_Seguranca</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Kurose_Security</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Kurose_Transporte</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Kurose_Transport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Tanembaum_CamadaAplicacao</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Tanenbaum_Application</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Tanembaum_CamadaDeRede</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Tanenbaum_NetworkLayer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Tanembaum_CamadaDeTransporte</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Tanenbaum_Transport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Tanembaum_CamadaEnlaceDeDados</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Tanenbaum_DataLinkLayer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Tanembaum_CamadaFisica</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Tanenbaum_PhysicalLayer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Tanembaum_SegurancaRedes</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Tanenbaum_Security</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Tanembaum_SubcamadaControleAcessoAoMeio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Tanenbaum_MediumAccessControl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topic_Tanembaum_introducao</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">topic_Tanenbaum_Introduction</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
